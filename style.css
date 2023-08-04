@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --Grayish-Blue: hsl(217, 19%, 38%);
+    --Dark-Grayish-Blue: hsl(217, 19%, 24%);
+    --Dark-Blue: hsl(218, 23%, 16%);
+    --Light-Cyan: hsl(193, 38%, 86%);
+    --Neon-Green: hsl(150, 100%, 66%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--Dark-Blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    
+}
+.container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    min-width: 250px;
+    min-height: 140px;
+    padding: 25px 25px 30px;
+    border-radius: 10px;
+    gap: 10px;
+    background-color: var(--Dark-Grayish-Blue);
+    transition: 1s all;    
+}
+.container h1{
+    color: var(--Neon-Green);
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+.container > .results > p{
+    color: var(--Light-Cyan);
+    font-weight: 700;
+    pointer-events: none;
+}
+.search{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: -20%;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: var(--Neon-Green);
+    cursor: pointer;
+    transition: .1s infinite;
+    
+}
+.search:hover{
+    transition: .1s all;
+    transform: scale(1.05);
+}
+footer{
+    position: fixed;
+    bottom: 10px;
+    color: #f8f8f8;
+}
+footer a{
+    color: var(--Neon-Green);
+}
+footer a:hover{
+    color:  hsl(150, 100%, 60%);
+    text-decoration: underline;
+}
+.search.mexer{
+    animation: mexer 3s;
+}
+.wait-cursor{
+    cursor: wait;
+}
+
+#res{
+    text-align: center;
+}
+@keyframes mexer {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
