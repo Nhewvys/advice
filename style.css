@@ -89,6 +89,17 @@ footer a:hover{
 #res{
     text-align: center;
 }
+@media screen and (max-width: 500px) {
+    .container{
+        max-width: 80%;
+        min-width: min-content;
+
+    }
+    footer{
+        font-size: .9rem;
+    }
+    
+}
 @keyframes mexer {
     from{
         transform: rotate(0deg);
